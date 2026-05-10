@@ -49,3 +49,6 @@ bin/
 # Log files
   *.log
   logs/
+
+# python venv
+ venv/
