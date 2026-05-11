@@ -43,6 +43,8 @@ subprojects {
         implementation("com.fasterxml.jackson.core:jackson-databind:2.21.2")
         // Source: https://mvnrepository.com/artifact/org.springframework/spring-beans
         implementation("org.springframework:spring-beans:7.0.7")
+        // Source: https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus
+        implementation("io.micrometer:micrometer-registry-prometheus:1.17.0-M3")
     }
 
     tasks.named('test') {
