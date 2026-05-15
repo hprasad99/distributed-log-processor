@@ -39,8 +39,6 @@ subprojects {
         implementation 'org.springframework.boot:spring-boot-starter-kafka'
         implementation 'org.springframework.boot:spring-boot-starter-web'
         testImplementation 'org.springframework.boot:spring-boot-starter-kafka-test'
-        // Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-        implementation("com.fasterxml.jackson.core:jackson-databind:2.21.2")
         // Source: https://mvnrepository.com/artifact/org.springframework/spring-beans
         implementation("org.springframework:spring-beans:7.0.7")
         // Source: https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus
