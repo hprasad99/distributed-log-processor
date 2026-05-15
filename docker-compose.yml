@@ -32,14 +32,14 @@ services:
     image: postgres:15-alpine
     environment:
       POSTGRES_DB: logprocessor
-      POSTGRES_USER: loguser
+      POSTGRES_USER: logprocessor
       POSTGRES_PASSWORD: logpassword
     ports:
       - "5432:5432"
 
 
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus:latet
     ports:
       - "9090:9090"
 
