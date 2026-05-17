@@ -26,6 +26,8 @@ services:
     image: redis:7-alpine
     ports:
       - "6379:6379"
+    volumes:
+      - redis_data:/data
 
   # PostgreSQL for data persistence
   postgres:
@@ -36,12 +38,20 @@ services:
       POSTGRES_PASSWORD: logpassword
     ports:
       - "5432:5432"
-
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   prometheus:
-    image: prom/prometheus:latet
+    image: prom/prometheus:latest
     ports:
       - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
 
   grafana:
     image: grafana/grafana:latest
@@ -49,3 +59,12 @@ services:
       - "3000:3000"
     environment:
       GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana-dashboards.yml:/etc/grafana/provisioning/dashboards/dashboard.yml
+      - ./monitoring/dashboards:/var/lib/grafana/dashboards
+
+volumes:
+  redis_data:
+  postgres_data:
+  grafana_data:
