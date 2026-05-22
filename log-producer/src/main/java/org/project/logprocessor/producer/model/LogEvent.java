@@ -1,11 +1,14 @@
 package org.project.logprocessor.producer.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDateTime;
 import java.util.UUID;
+
+import org.project.logprocessor.producer.enums.LogLevel;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.Getter;
 import lombok.Setter;
-import org.project.logprocessor.producer.enums.LogLevel;
 
 @Getter
 @Setter

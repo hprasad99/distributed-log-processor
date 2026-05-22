@@ -3,6 +3,8 @@ plugins {
     id 'org.springframework.boot' version '4.0.6' apply false
     id 'io.spring.dependency-management' version '1.1.7' apply false
     id "com.diffplug.spotless" version "6.25.0" apply false
+    id 'checkstyle'
+    id 'jacoco'
 }
 
 allprojects {
@@ -17,9 +19,8 @@ subprojects {
     apply plugin: 'com.diffplug.spotless'
 
     java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(17)
-        }
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     repositories {
@@ -52,8 +53,10 @@ subprojects {
     spotless {
         java {
             target 'src/*/java/**/*.java'
-            googleJavaFormat() // Uses Google Java Format
+            googleJavaFormat('1.17.0') // Uses Google Java Format
             removeUnusedImports()
+            importOrder('java', 'javax', 'org', 'com', '')
+            indentWithSpaces(4)
             trimTrailingWhitespace()
             endWithNewline()
         }
