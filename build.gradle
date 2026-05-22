@@ -31,19 +31,13 @@ subprojects {
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
         testCompileOnly 'org.projectlombok:lombok'
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
         testAnnotationProcessor 'org.projectlombok:lombok'
-        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-        implementation 'org.springframework.boot:spring-boot-starter-kafka'
         implementation 'org.springframework.boot:spring-boot-starter-web'
         testImplementation 'org.springframework.boot:spring-boot-starter-kafka-test'
-        // Source: https://mvnrepository.com/artifact/org.springframework/spring-beans
-        implementation("org.springframework:spring-beans:7.0.7")
-        // Source: https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus
-        implementation("io.micrometer:micrometer-registry-prometheus:1.17.0-M3")
+        implementation("org.springframework:spring-beans:${springBeansVersion}")
+        implementation("io.micrometer:micrometer-registry-prometheus:${micrometerVersion}")
     }
 
     tasks.named('test') {
