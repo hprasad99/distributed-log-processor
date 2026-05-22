@@ -10,6 +10,8 @@ The system consists of three main services:
 - **Log Producer** (Port 8081): REST API that accepts log events and publishes them to Kafka.
 - **Log Consumer** (Port 8082): Kafka consumer that processes events and stores them in PostgreSQL
 
+![distributed-log-processor.png](distributed-log-processor.png)
+
 ### Infrastructure Components
 
 - **Apache Kafka**: Message streaming platform for event-driven architecture
@@ -17,3 +19,5 @@ The system consists of three main services:
 - **PostgreSQL**: Persistent storage for processed log events
 - **Prometheus**: Metrics collection and monitoring
 - **Grafana**: Metrics visualization and dashboards
+
+
