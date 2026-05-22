@@ -8,8 +8,8 @@ plugins {
 }
 
 allprojects {
-    group = 'com.example'
-    version = '0.0.1-SNAPSHOT'
+    group = 'org.project'
+    version = '1.0.0-SNAPSHOT'
 }
 
 subprojects {
