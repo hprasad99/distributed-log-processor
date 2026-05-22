@@ -1,10 +1,8 @@
 package org.project.logprocessor.producer.controller;
 
-import io.micrometer.core.annotation.Timed;
-import io.micrometer.core.instrument.Counter;
-import io.micrometer.core.instrument.MeterRegistry;
 import java.util.Map;
 import java.util.UUID;
+
 import org.project.logprocessor.producer.model.LogEvent;
 import org.project.logprocessor.producer.service.KafkaProducerService;
 import org.slf4j.Logger;
@@ -12,6 +10,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import io.micrometer.core.annotation.Timed;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
 
 @RestController
 @RequestMapping("/api/logs")

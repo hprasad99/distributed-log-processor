@@ -2,6 +2,7 @@ package org.project.logprocessor.consumer.repository;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
 import org.project.logprocessor.consumer.model.LogEvent;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

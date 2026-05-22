@@ -1,8 +1,7 @@
 package org.project.logprocessor.consumer.service;
 
-import io.micrometer.core.instrument.Counter;
-import io.micrometer.core.instrument.MeterRegistry;
 import java.time.LocalDateTime;
+
 import org.project.logprocessor.consumer.model.LogEvent;
 import org.project.logprocessor.consumer.repository.LogEventRepository;
 import org.slf4j.Logger;
@@ -19,6 +18,9 @@ import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Service;
+
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
 import tools.jackson.databind.ObjectMapper;
 
 @Service
