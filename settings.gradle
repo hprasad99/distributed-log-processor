@@ -1,5 +1,4 @@
 rootProject.name = 'distributed-log-processor'
 
-include 'log-producer'
-include 'log-consumer'
+include 'log-generator'
 include 'api-gateway'
