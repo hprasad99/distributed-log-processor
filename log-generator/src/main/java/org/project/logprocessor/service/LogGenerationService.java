@@ -1,6 +1,12 @@
 package org.project.logprocessor.service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -163,5 +169,21 @@ public class LogGenerationService {
     metadata.put("request_id", UUID.randomUUID().toString());
     metadata.put("user_id", "user_" + random.nextInt(10000));
     return new LogEvent(level, source, message, metadata);
+  }
+
+  public long getTotalGenerated() {
+    return generatedCounter.get();
+  }
+
+  public long getTotalRateLimited() {
+    return rateLimitedCounter.get();
+  }
+
+  public int getCurrentRate() {
+    return currentRatePerSecond.get();
+  }
+
+  public boolean isRunning() {
+    return isRunning;
   }
 }
