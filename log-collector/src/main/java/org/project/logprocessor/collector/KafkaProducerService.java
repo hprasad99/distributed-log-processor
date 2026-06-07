@@ -1,4 +1,3 @@
 package org.project.logprocessor.collector;
 
-public class KafkaProducerService {
-}
+public class KafkaProducerService {}

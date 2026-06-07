@@ -1,4 +1,3 @@
 package org.project.logprocessor.collector;
 
-public class LogCollectorService {
-}
+public class LogCollectorService {}
