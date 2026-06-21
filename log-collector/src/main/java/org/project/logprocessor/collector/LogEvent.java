@@ -17,6 +17,16 @@ public class LogEvent {
   private String serviceName;
   private String contentHash;
 
+  public LogEvent(String filePath, String content, long fileOffset) {
+    this.filePath = filePath;
+    this.content = content;
+    this.fileOffset = fileOffset;
+    this.timestamp = LocalDateTime.now();
+    this.hostname = System.getenv().getOrDefault("HOSTNAME", "localhost");
+    this.serviceName = "log-collector";
+    this.id = generateId();
+  }
+
   private String generateId() {
     return String.format("%s-%d-%s", filePath.hashCode(), fileOffset, timestamp.toString());
   }
