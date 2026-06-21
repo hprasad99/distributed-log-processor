@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.boot:spring-boot-starter-kafka'
     testImplementation 'org.springframework.boot:spring-boot-starter-kafka-test'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
