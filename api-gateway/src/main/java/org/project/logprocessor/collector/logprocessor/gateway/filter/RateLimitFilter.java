@@ -1,4 +1,4 @@
-package org.project.logprocessor.gateway.filter;
+package org.project.logprocessor.collector.logprocessor.gateway.filter;
 
 import java.time.Duration;
 
