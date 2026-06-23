@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/api-gateway" />
+            <option value="$PROJECT_DIR$/log-collector" />
             <option value="$PROJECT_DIR$/log-generator" />
           </set>
         </option>
